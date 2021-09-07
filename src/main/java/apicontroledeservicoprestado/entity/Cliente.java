@@ -27,6 +27,7 @@ public class Cliente {
 	@Column(nullable = false, length = 11)
 	private String cpf;
 	
+	@Column(name = "data_cadastro")
 	private LocalDate dataCadastro;
 	
 }
