@@ -15,19 +15,28 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Cliente {
-  
+
 	@Id
 	@EqualsAndHashCode.Include
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column(nullable = false, length = 150)
 	private String nome;
-	
+
 	@Column(nullable = false, length = 11)
 	private String cpf;
-	
+
 	@Column(name = "data_cadastro")
 	private LocalDate dataCadastro;
-	
+
+	/*
+	 * Executar algo antes de persistir
+	 * 
+	 * @PrePersist 
+	 * public void persistirHora() {
+	 *  setDataCadastro(LocalDate.now()); 
+	 *  }
+	 */
+
 }
