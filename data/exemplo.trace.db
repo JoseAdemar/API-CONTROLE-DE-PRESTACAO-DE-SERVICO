@@ -62,3 +62,6 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 55 more
+2021-09-14 08:56:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "CPF VARCHAR(11)": "'142589748524' (12)"; SQL statement:
+insert into cliente (id, cpf, data_cadastro, nome) values (null, ?, ?, ?) [22001-200]
