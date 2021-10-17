@@ -213,3 +213,12 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:622)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 81 more
+2021-10-16 09:27:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "CPF VARCHAR(11)": "'794.710.390-96' (14)"; SQL statement:
+insert into cliente (id, cpf, data_cadastro, nome) values (null, ?, ?, ?) [22001-200]
+2021-10-17 11:00:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "CPF VARCHAR(11)": "'261.258.840-07' (14)"; SQL statement:
+insert into cliente (id, cpf, data_cadastro, nome) values (null, ?, ?, ?) [22001-200]
+2021-10-17 11:19:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Value too long for column "CPF VARCHAR(11)": "'261.258.840-07' (14)"; SQL statement:
+insert into cliente (id, cpf, data_cadastro, nome) values (null, ?, ?, ?) [22001-200]

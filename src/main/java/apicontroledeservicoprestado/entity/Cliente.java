@@ -7,8 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.validator.constraints.br.CPF;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -26,9 +28,11 @@ public class Cliente {
 	private Long id;
 
 	@Column(nullable = false, length = 150)
+	@NotBlank(message = "{campo.nome.obrigatorio}")
 	private String nome;
 
 	@Column(nullable = false, length = 11)
+	@CPF(message = "{campo.cpf.obrigatorio}")
 	private String cpf;
 
 	@CreationTimestamp
